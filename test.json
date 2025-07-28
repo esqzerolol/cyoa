@@ -1,0 +1,148 @@
+{
+  "intro": {
+    "title": "O Despertar do Aventureiro",
+    "story": [
+      "Você acorda em uma clareira no meio da floresta, sem lembranças de como chegou ali. Tudo o que tem consigo é uma mochila, uma tocha meio gasta e uma adaga enferrujada.",
+      "À sua frente, um caminho leva para dentro da floresta densa. Atrás de você, há um som estranho vindo de uma caverna parcialmente escondida por arbustos."
+    ],
+    "options": [
+      {
+        "text": "Seguir pela trilha na floresta.",
+        "arc": "floresta"
+      },
+      {
+        "text": "Investigar a caverna misteriosa.",
+        "arc": "caverna"
+      }
+    ]
+  },
+
+  "floresta": {
+    "title": "Entre Sombras e Folhas",
+    "story": [
+      "Você avança cautelosamente pela trilha, atento a cada som ao seu redor. As árvores parecem se fechar sobre você, tornando o ambiente mais escuro.",
+      "Logo à frente, você vê uma figura encapuzada sentada ao lado de uma fogueira apagada."
+    ],
+    "options": [
+      {
+        "text": "Abordar a figura e tentar conversar.",
+        "arc": "figura"
+      },
+      {
+        "text": "Ignorar e seguir caminho pela floresta.",
+        "arc": "profundezas"
+      }
+    ]
+  },
+
+  "caverna": {
+    "title": "Eco das Trevas",
+    "story": [
+      "Você empurra os arbustos e entra na caverna. O ar é úmido e cheira a mofo.",
+      "Lá dentro, você vê um brilho fraco vindo do fundo, mas também ouve passos pesados ecoando pelas paredes."
+    ],
+    "options": [
+      {
+        "text": "Seguir em direção ao brilho.",
+        "arc": "cristal"
+      },
+      {
+        "text": "Se esconder e esperar pelos passos passarem.",
+        "arc": "espera"
+      }
+    ]
+  },
+
+  "figura": {
+    "title": "O Guardião da Floresta",
+    "story": [
+      "A figura se vira lentamente, revelando um rosto envelhecido e gentil. Ele se apresenta como Eldrin, um antigo guardião da floresta.",
+      "Eldrin oferece sabedoria e um mapa antigo, marcando locais esquecidos. Você sente que pode confiar nele."
+    ],
+    "options": [
+      {
+        "text": "Aceitar o mapa e seguir em direção às ruínas antigas.",
+        "arc": "ruinas"
+      },
+      {
+        "text": "Agradecer, mas seguir outro caminho por conta própria.",
+        "arc": "atalho"
+      }
+    ]
+  },
+
+  "profundezas": {
+    "title": "Floresta Sombria",
+    "story": [
+      "Ao ignorar a figura, você acaba se perdendo entre árvores idênticas.",
+      "Após horas andando em círculos, você ouve rosnados... lobos.",
+      "Sem ter para onde correr, você se prepara para lutar."
+    ],
+    "options": []
+  },
+
+  "cristal": {
+    "title": "Coração Brilhante",
+    "story": [
+      "Você encontra um grande cristal azul emanando uma energia estranha. Ao tocá-lo, uma visão atravessa sua mente: imagens de um reino perdido e uma missão inacabada.",
+      "Você sente que seu destino está ligado a esse lugar."
+    ],
+    "options": [
+      {
+        "text": "Aceitar a visão e seguir seu chamado.",
+        "arc": "missao"
+      },
+      {
+        "text": "Recuar e sair da caverna imediatamente.",
+        "arc": "intro"
+      }
+    ]
+  },
+
+  "espera": {
+    "title": "Silêncio Tenso",
+    "story": [
+      "Você se esconde atrás de uma rocha. As pisadas se aproximam…",
+      "É um troll enorme. Ele para, fareja o ar, mas segue em frente. Você escapa ileso por pouco.",
+      "Com o perigo passado, você continua explorando a caverna."
+    ],
+    "options": [
+      {
+        "text": "Voltar à entrada da caverna.",
+        "arc": "intro"
+      },
+      {
+        "text": "Explorar ainda mais profundamente.",
+        "arc": "cristal"
+      }
+    ]
+  },
+
+  "ruinas": {
+    "title": "Segredos Esquecidos",
+    "story": [
+      "Guiado pelo mapa, você encontra ruínas antigas cobertas por vegetação.",
+      "Nas paredes, inscrições contam a história de um guerreiro que selou um grande mal no passado... talvez você seja o próximo herdeiro dessa missão."
+    ],
+    "options": []
+  },
+
+  "atalho": {
+    "title": "Caminho Perigoso",
+    "story": [
+      "Ignorando o conselho de Eldrin, você toma um atalho que acredita ser mais rápido.",
+      "Mas uma emboscada de bandidos logo mostra o erro de seu julgamento.",
+      "Você luta, mas está em desvantagem."
+    ],
+    "options": []
+  },
+
+  "missao": {
+    "title": "O Chamado do Destino",
+    "story": [
+      "Aceitando o chamado do cristal, você recebe em sua mente um novo propósito: restaurar o equilíbrio entre os reinos e derrotar a sombra que se ergue.",
+      "Sua jornada está apenas começando."
+    ],
+    "options": []
+  }
+}
