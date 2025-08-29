@@ -3,13 +3,40 @@ package storytelling
 import (
 	"errors"
 	"fmt"
+	"os"
+	"os/exec"
+	"runtime"
 )
 
 var ErrDeadEndReached = errors.New("dead end reached")
 var ErrNoIntro = errors.New("no intro located")
 
 func clearScreen() {
-    fmt.Print("\033[H\033[2J")
+	var cmd *exec.Cmd
+
+	switch runtime.GOOS {
+	case "windows":
+		cmd = exec.Command("cmd", "/c", "cls")
+	default: // Unix-like systems
+		cmd = exec.Command("clear")
+	}
+
+	cmd.Stdout = os.Stdout
+	cmd.Run()
+}
+
+func WaitForExit() {
+	if runtime.GOOS == "windows" {
+		cmd := exec.Command("cmd", "/c", "pause")
+		cmd.Stdout = os.Stdout
+		cmd.Stdin = os.Stdin
+		cmd.Run()
+	} else {
+		// For Linux/macOS
+		fmt.Println("Pressione ENTER para sair...")
+		var input string
+		fmt.Scanln(&input)
+	}
 }
 
 type StoryArc struct {
@@ -52,7 +79,7 @@ func (s *StoryArc) printOptions() (string, error) {
 	}
 	for key, curOption := range s.Options {
 		fmt.Println(curOption.OptionText)
-		fmt.Printf("[%d]: %s", (key+1), curOption.NextArc)
+		fmt.Printf("[%d]: %s", (key + 1), curOption.NextArc)
 		fmt.Println()
 	}
 
@@ -69,11 +96,12 @@ func chooseNumber(maxNum int) (chosen int) {
 			continue
 		}
 		clearScreen()
-		return (chosen-1)
+		return (chosen - 1)
 	}
 }
 
 func StartAdventure(story map[string]StoryArc) (lastArc string, err error) {
+	// clearScreen()
 	lastArc = "intro"
 	if val, ok := story[lastArc]; ok {
 		for {
@@ -84,6 +112,6 @@ func StartAdventure(story map[string]StoryArc) (lastArc string, err error) {
 			val = story[nextArc]
 			lastArc = nextArc
 		}
-	} 
+	}
 	return "", nil
 }

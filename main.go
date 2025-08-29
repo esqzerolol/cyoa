@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+
 	"github.com/gophercises/cyoa/storytelling"
 )
 
@@ -34,5 +35,7 @@ func main() {
 		fmt.Println("Sinta-se à vontade para embarcar novamente, escolha caminhos diferentes e descubra novas aventuras.")
 	default:
 	}
+
+	storytelling.WaitForExit()
 
 }
